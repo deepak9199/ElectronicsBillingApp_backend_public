@@ -1,0 +1,684 @@
+{
+	"info": {
+		"_postman_id": "8710cd0c-ce63-405e-8354-450c65c1ff70",
+		"name": "ElectronicsBillingApp_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25474227"
+	},
+	"item": [
+		{
+			"name": "test",
+			"item": [
+				{
+					"name": "test API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2202/api/test/all",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"test",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "customer create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE2Njg1NDExNTUsImV4cCI6MTY2ODU1OTE1NX0.ppAIOQ06h9FosKsw5CYdLRPxbb5nGNDYBXeBSyUj0XkyEUaiSbIvh2GNzyY1VPgDH8aLDt5m_zr-DRIIYmjBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\":\"2\",\r\n    \"name\":\"deepak\",\r\n    \"address\":\"sharma\",\r\n    \"gst\":\"awdawdawdaw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2202/api/customer/",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE2Njg1NDExNTUsImV4cCI6MTY2ODU1OTE1NX0.ppAIOQ06h9FosKsw5CYdLRPxbb5nGNDYBXeBSyUj0XkyEUaiSbIvh2GNzyY1VPgDH8aLDt5m_zr-DRIIYmjBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"deepaksharma\",\r\n    \"address\":\"sharma\",\r\n    \"gst\":\"awdawdawdaw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2202/api/customer/",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE2Njg1NDExNTUsImV4cCI6MTY2ODU1OTE1NX0.ppAIOQ06h9FosKsw5CYdLRPxbb5nGNDYBXeBSyUj0XkyEUaiSbIvh2GNzyY1VPgDH8aLDt5m_zr-DRIIYmjBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\":\"2\",\r\n    \"name\":\"deepak\",\r\n    \"address\":\"sharma\",\r\n    \"gst\":\"awdawdawdaw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2202/api/customer/1",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE2Njg1NDExNTUsImV4cCI6MTY2ODU1OTE1NX0.ppAIOQ06h9FosKsw5CYdLRPxbb5nGNDYBXeBSyUj0XkyEUaiSbIvh2GNzyY1VPgDH8aLDt5m_zr-DRIIYmjBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:2202/api/customer/1",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer get by user id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE2Njg1NDExNTUsImV4cCI6MTY2ODU1OTE1NX0.ppAIOQ06h9FosKsw5CYdLRPxbb5nGNDYBXeBSyUj0XkyEUaiSbIvh2GNzyY1VPgDH8aLDt5m_zr-DRIIYmjBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"deepaksharma\",\r\n    \"address\":\"sharma\",\r\n    \"gst\":\"awdawdawdaw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2202/api/customer/1",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "item create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE2Njg1NDExNTUsImV4cCI6MTY2ODU1OTE1NX0.ppAIOQ06h9FosKsw5CYdLRPxbb5nGNDYBXeBSyUj0XkyEUaiSbIvh2GNzyY1VPgDH8aLDt5m_zr-DRIIYmjBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Mango\",\r\n    \"userid\":\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2202/api/Item/",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"Item",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "item update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE2Njg1NDExNTUsImV4cCI6MTY2ODU1OTE1NX0.ppAIOQ06h9FosKsw5CYdLRPxbb5nGNDYBXeBSyUj0XkyEUaiSbIvh2GNzyY1VPgDH8aLDt5m_zr-DRIIYmjBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\":\"2\",\r\n    \"name\":\"Mango\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2202/api/Item/1",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"Item",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "item delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE2Njg1NDExNTUsImV4cCI6MTY2ODU1OTE1NX0.ppAIOQ06h9FosKsw5CYdLRPxbb5nGNDYBXeBSyUj0XkyEUaiSbIvh2GNzyY1VPgDH8aLDt5m_zr-DRIIYmjBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:2202/api/Item/1",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"Item",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "item get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE2Njg1NDExNTUsImV4cCI6MTY2ODU1OTE1NX0.ppAIOQ06h9FosKsw5CYdLRPxbb5nGNDYBXeBSyUj0XkyEUaiSbIvh2GNzyY1VPgDH8aLDt5m_zr-DRIIYmjBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2202/api/Item/",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"Item",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "item get by user id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE2Njg1NDExNTUsImV4cCI6MTY2ODU1OTE1NX0.ppAIOQ06h9FosKsw5CYdLRPxbb5nGNDYBXeBSyUj0XkyEUaiSbIvh2GNzyY1VPgDH8aLDt5m_zr-DRIIYmjBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2202/api/Item/1",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"Item",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "State",
+			"item": [
+				{
+					"name": "State API",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWtAZ21haWwuY29tIiwiaWF0IjoxNjc1NTAzNjA3LCJleHAiOjE2NzU1MjE2MDd9.zQm_x9FCuv_cszQZKeBbs2w2oNNJjBMr-Eii0eCf2a9vpBKZTjVUNI_uHfNKKg2CChh383aJRS42646hi2JJww",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2202/api/State/",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"State",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Deepak@gmail.com\",\r\n    \"email\":\"Deepak@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"role\":[\"admin\"],\r\n    \"passcode\":\"Goku@9199731275\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2202/api/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"test@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2202/api/auth/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sale",
+			"item": [
+				{
+					"name": "sale delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjQ0ODE0NiwiZXhwIjoxNjc2NDY2MTQ2fQ.7oLK2i-SNYiWu6K93fTXChFCzLARh6BDHAZ7Ctqz9aZeVXplmj_-Z-9eXRDv6K_cOVoeBVZRCMk8h7Icr6vtMQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"billnoid\":\"2\", \r\n    \"userid\":\"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2202/api/Sale",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"Sale"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sale get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE2Njg1NDExNTUsImV4cCI6MTY2ODU1OTE1NX0.ppAIOQ06h9FosKsw5CYdLRPxbb5nGNDYBXeBSyUj0XkyEUaiSbIvh2GNzyY1VPgDH8aLDt5m_zr-DRIIYmjBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2202/api/Sale/",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"Sale",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sale get by user id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjQzOTIzNywiZXhwIjoxNjc2NDU3MjM3fQ.JArl4_-25wU_PBb5KhXCbYUBjZ3zM_YTKkwyNzxVQemt6PiahuHW5N7DUEvCeaxXaWt6WrnpApHGTiB_h9XdzA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:2202/api/Sale/5",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"Sale",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sale update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJEZWVwYWsiLCJpYXQiOjE2Njg1NDExNTUsImV4cCI6MTY2ODU1OTE1NX0.ppAIOQ06h9FosKsw5CYdLRPxbb5nGNDYBXeBSyUj0XkyEUaiSbIvh2GNzyY1VPgDH8aLDt5m_zr-DRIIYmjBgg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sale\": {\r\n        \"userid\": \"5\",\r\n        \"invoice_no\": \"11\",\r\n        \"date\": \"2022-10-01\",\r\n        \"name\": \"deepak\",\r\n        \"address\": \"dhanbad\",\r\n        \"total_amount\": \"100.10\",\r\n        \"amount_in_word\": \"adawdawdaw\",\r\n        \"state\": \"jharkhand\",\r\n        \"state_code\": \"jh20\",\r\n        \"total_tax_value\": \"100.10\",\r\n        \"total_rate_value\": \"10.10\",\r\n        \"gsttin_no\": \"jh20\",\r\n        \"vehicalno\": \"adawd\",\r\n        \"session\": \"2022-2023\",\r\n        \"type\": \"gst\"\r\n    },\r\n    \"saleItem\": [\r\n        {\r\n            \"item\": \"Mango\",\r\n            \"hsn_code\": \"awdawdaw\",\r\n            \"model_no\": \"adawda\",\r\n            \"sl_no_and_emie_no\": \"asda151561321\",\r\n            \"quantity\": \"5\",\r\n            \"rate\": \"2555\",\r\n            \"cgst_per\": \"250\",\r\n            \"sgst_per\": \"260\",\r\n            \"igst_per\": \"2555\",\r\n            \"gst_tax_value\": \"250\"\r\n        },\r\n        {\r\n            \"item\": \"Mango\",\r\n            \"hsn_code\": \"awdawdaw\",\r\n            \"model_no\": \"adawda\",\r\n            \"sl_no_and_emie_no\": \"asda151561321\",\r\n            \"quantity\": \"5\",\r\n            \"rate\": \"2555\",\r\n            \"cgst_per\": \"250\",\r\n            \"sgst_per\": \"260\",\r\n            \"igst_per\": \"2555\",\r\n            \"gst_tax_value\": \"250\"\r\n        },\r\n        {\r\n            \"item\": \"Mango\",\r\n            \"hsn_code\": \"awdawdaw\",\r\n            \"model_no\": \"adawda\",\r\n            \"sl_no_and_emie_no\": \"asda151561321\",\r\n            \"quantity\": \"5\",\r\n            \"rate\": \"2555\",\r\n            \"cgst_per\": \"250\",\r\n            \"sgst_per\": \"260\",\r\n            \"igst_per\": \"2555\",\r\n            \"gst_tax_value\": \"250\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2202/api/Sale/1",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"Sale",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sale",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY3NjQzOTIzNywiZXhwIjoxNjc2NDU3MjM3fQ.JArl4_-25wU_PBb5KhXCbYUBjZ3zM_YTKkwyNzxVQemt6PiahuHW5N7DUEvCeaxXaWt6WrnpApHGTiB_h9XdzA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sale\": {\r\n        \"userid\": \"5\",\r\n        \"invoice_no\": \"11\",\r\n        \"date\": \"2022-10-01\",\r\n        \"name\": \"deepak\",\r\n        \"address\": \"dhanbad\",\r\n        \"total_amount\": \"100.10\",\r\n        \"amount_in_word\": \"adawdawdaw\",\r\n        \"state\": \"jharkhand\",\r\n        \"state_code\": \"jh20\",\r\n        \"total_tax_value\": \"100.10\",\r\n        \"total_rate_value\": \"10.10\",\r\n        \"gsttin_no\": \"jh20\",\r\n        \"vehicalno\": \"adawd\",\r\n        \"session\": \"2022-2023\",\r\n        \"type\": \"gst\"\r\n    },\r\n    \"saleItem\": [\r\n        {\r\n            \"item\": \"Mango\",\r\n            \"hsn_code\": \"awdawdaw\",\r\n            \"model_no\": \"adawda\",\r\n            \"sl_no_and_emie_no\": \"asda151561321\",\r\n            \"quantity\": \"5\",\r\n            \"rate\": \"2555\",\r\n            \"cgst_per\": \"250\",\r\n            \"sgst_per\": \"260\",\r\n            \"igst_per\": \"2555\",\r\n            \"gst_tax_value\": \"250\"\r\n        },\r\n        {\r\n            \"item\": \"Mango\",\r\n            \"hsn_code\": \"awdawdaw\",\r\n            \"model_no\": \"adawda\",\r\n            \"sl_no_and_emie_no\": \"asda151561321\",\r\n            \"quantity\": \"5\",\r\n            \"rate\": \"2555\",\r\n            \"cgst_per\": \"250\",\r\n            \"sgst_per\": \"260\",\r\n            \"igst_per\": \"2555\",\r\n            \"gst_tax_value\": \"250\"\r\n        },\r\n        {\r\n            \"item\": \"Mango\",\r\n            \"hsn_code\": \"awdawdaw\",\r\n            \"model_no\": \"adawda\",\r\n            \"sl_no_and_emie_no\": \"asda151561321\",\r\n            \"quantity\": \"5\",\r\n            \"rate\": \"2555\",\r\n            \"cgst_per\": \"250\",\r\n            \"sgst_per\": \"260\",\r\n            \"igst_per\": \"2555\",\r\n            \"gst_tax_value\": \"250\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2202/api/Sale/",
+							"host": [
+								"localhost"
+							],
+							"port": "2202",
+							"path": [
+								"api",
+								"Sale",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

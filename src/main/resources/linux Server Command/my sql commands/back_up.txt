@@ -1,0 +1,1 @@
+mysqldump -u root -p plyshop> \path\backup.sql

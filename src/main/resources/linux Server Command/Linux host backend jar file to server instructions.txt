@@ -1,0 +1,102 @@
+//copy file to server
+scp ElectronicsBillingApp-0.0.1-SNAPSHOT.jar goku-5233@192.168.1.14:/home/goku-5233/ElectronicsBillingApp/backend
+scp applsci-0.0.1-SNAPSHOT.jar goku-5233@192.168.1.14:/home/goku-5233/Applsci/backend
+scp applsci.rar goku-5233@192.168.1.14:/home/goku-5233/Applsci/frontend
+scp applsci-backup-04-03-2023.sql goku-5233@192.168.1.14:/home/goku-5233/Applsci/database
+scp electronics.rar goku-5233@192.168.1.14:/home/goku-5233/ElectronicsBillingApp/frontend
+
+
+//frontend hosted dir
+/var/www/html
+
+// copy command
+sudo cp -a ElectronicsBillingApp/frontend/electronics /var/www/html
+
+//find apth of file 
+pwd
+
+//path name
+eg. sudo vi /usr/local/bin/Service_Name.sh
+eg. sudo vi /etc/systemd/system/Service_Name.service
+
+//open port 
+sudo ufw allow 4000
+
+//.sh code for create jar backend service.sh file
+(path - eg. sudo vi /usr/local/bin/Service_Name.sh)
+
+#!/bin/sh 
+SERVICE_NAME=ApplsciAppBackend 
+PATH_TO_JAR=/home/goku-5233/Applsci/backend/applsci-0.0.1-SNAPSHOT.jar
+PID_PATH_NAME=/tmp/ApplsciAppBackend-pid 
+case $1 in 
+start)
+       echo "Starting $SERVICE_NAME ..."
+  if [ ! -f $PID_PATH_NAME ]; then 
+       nohup java -jar $PATH_TO_JAR >> myService.out 2>&1&      
+                   echo $! > $PID_PATH_NAME  
+       echo "$SERVICE_NAME started ..."         
+  else 
+       echo "$SERVICE_NAME is already running ..."
+  fi
+;;
+stop)
+  if [ -f $PID_PATH_NAME ]; then
+         PID=$(cat $PID_PATH_NAME);
+         echo "$SERVICE_NAME stoping ..." 
+         kill $PID;         
+         echo "$SERVICE_NAME stopped ..." 
+         rm $PID_PATH_NAME       
+  else          
+         echo "$SERVICE_NAME is not running ..."   
+  fi    
+;;    
+restart)  
+  if [ -f $PID_PATH_NAME ]; then 
+      PID=$(cat $PID_PATH_NAME);    
+      echo "$SERVICE_NAME stopping ..."; 
+      kill $PID;           
+      echo "$SERVICE_NAME stopped ...";  
+      rm $PID_PATH_NAME     
+      echo "$SERVICE_NAME starting ..."  
+      nohup java -jar $PATH_TO_JAR >> myService.out 2>&1&           
+      echo $! > $PID_PATH_NAME  
+      echo "$SERVICE_NAME started ..."    
+  else           
+      echo "$SERVICE_NAME is not running ..."    
+     fi     ;;
+ esac
+
+
+
+
+//To make the file executable by everyone, use
+sudo chmod a+x my_script.sh.
+
+
+
+
+//.service code for create jar backend service file
+(path - eg. sudo vi /etc/systemd/system/Service_Name.service)
+
+[Unit]
+ Description = ApplsciAppBackend Service
+ After network.target = ApplsciAppBackend.service
+[Service]
+ Type = forking
+ Restart=always
+ RestartSec=1
+ SuccessExitStatus=143 
+ ExecStart = /usr/local/bin/ApplsciAppBackend.sh start
+ ExecStop = /usr/local/bin/ApplsciAppBackend.sh stop
+ ExecReload = /usr/local/bin/ApplsciAppBackend.sh reload
+[Install]
+ WantedBy=multi-user.target
+
+
+// run service commnad
+sudo systemctl daemon-reload
+sudo systemctl enable ApplsciAppBackend
+sudo systemctl start  ApplsciAppBackend
+sudo systemctl status  ApplsciAppBackend
+sudo systemctl stop   ApplsciAppBackend
